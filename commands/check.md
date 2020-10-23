@@ -56,6 +56,14 @@ krakend check
 Please, provide the path to your config file
 {{< /terminal >}}
 
+To detect [colliding routes](/docs/endpoints/creating-endpoints/#colliding-routes) use the `-t` flag:
+{{< terminal >}}
+krakend check -t --config krakend.json
+Parsing configuration file: krakend.json
+ERROR testing the configuration file.
+ wildcard segment ':variable' conflicts with existing children in path '/:variable'
+{{< /terminal >}}
+
 ## Example
 
 We will use this configuration for the demo
